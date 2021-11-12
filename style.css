@@ -1,0 +1,181 @@
+:root {
+  /* ### Primary */
+
+  --color-soft-red: hsl(7, 99%, 70%);
+  --soft-red-hue: 7;
+  --soft-red-sat: 99%;
+  --soft-red-light: 70%;
+
+  --color-yellow: hsl(51, 100%, 49%);
+  --yellow-hue: 51;
+  --yellow-sat: 100%;
+  --yellow-light: 49%;
+
+  --color-dark-desaturated-cyan-graphic-design-text: hsl(167, 40%, 24%);
+  --dark-desaturated-cyan-graphic-design-text-hue: 167;
+  --dark-desaturated-cyan-graphic-design-text-sat: 40%;
+  --dark-desaturated-cyan-graphic-design-text-light: 24%;
+
+  --color-dark-blue-photography-text: hsl(198, 62%, 26%);
+  --dark-blue-photography-text-hue: 198;
+  --dark-blue-photography-text-sat: 62%;
+  --dark-blue-photography-text-light: 26%;
+
+  --color-dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+  --dark-moderate-cyan-footer-hue: 168;
+  --dark-moderate-cyan-footer-sat: 34%;
+  --dark-moderate-cyan-footer-light: 41%;
+
+  /* ### Neutral */
+
+  --color-very-dark-desaturated-blue: hsl(212, 27%, 19%);
+  --very-dark-desaturated-blue-hue: 212;
+  --very-dark-desaturated-blue-sat: 27%;
+  --very-dark-desaturated-blue-light: 19%;
+
+  --color-very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --very-dark-grayish-blue-hue: 213;
+  --very-dark-grayish-blue-sat: 9%;
+  --very-dark-grayish-blue-light: 39%;
+
+  --color-dark-grayish-blue: hsl(232, 10%, 55%);
+  --dark-grayish-blue-hue: 232;
+  --dark-grayish-blue-sat: 10%;
+  --dark-grayish-blue-light: 55%;
+
+  --color-grayish-blue: hsl(210, 4%, 67%);
+  --grayish-blue-hue: 210;
+  --grayish-blue-sat: 4%;
+  --grayish-blue-light: 67%;
+
+  --color-white: hsl(0, 0%, 100%);
+  --white-hue: 0;
+  --white-sat: 0;
+  --white-light: 100%;
+
+  font-size: 18px;
+
+  --fontSize: 18px;
+
+  --fontSize-x8-small: calc(var(--fontSize) * 0.8);
+  --fontSize-x7-small: calc(var(--fontSize) * 0.7);
+
+  --fontSize-x6-small: calc(var(--fontSize) * 0.6);
+  --fontSize-x5-small: calc(var(--fontSize) * 0.5);
+  --fontSize-x4-small: calc(var(--fontSize) * 0.4);
+
+  --fontSize-medium: var(--fontSize);
+
+  --fontSize-x2-large: calc(var(--fontSize) * 1.2);
+  --fontSize-x3-large: calc(var(--fontSize) * 1.3);
+  --fontSize-x4-large: calc(var(--fontSize) * 1.4);
+  --fontSize-x5-large: calc(var(--fontSize) * 1.5);
+  --fontSize-x6-large: calc(var(--fontSize) * 1.6);
+  --fontSize-x7-large: calc(var(--fontSize) * 1.7);
+  --fontSize-x8-large: calc(var(--fontSize) * 1.8);
+  --fontSize-x9-large: calc(var(--fontSize) * 1.9);
+  --fontSize-x20-large: calc(var(--fontSize) * 2);
+  --fontSize-x25-large: calc(var(--fontSize) * 2.5);
+  --fontSize-x30-large: calc(var(--fontSize) * 3);
+  --fontSize-x35-large: calc(var(--fontSize) * 3.5);
+  --fontSize-x40-large: calc(var(--fontSize) * 4);
+  --fontSize-x45-large: calc(var(--fontSize) * 4.5);
+  --fontSize-x50-large: calc(var(--fontSize) * 5);
+
+  --ff-Barlow: "Barlow", sans-serif;
+  --ff-Fraunces: "Fraunces", serif;
+
+  --fontWeight-Barlow-600: 600;
+
+  --fontWeight-Fraunces-700: 700;
+  --fontWeight-Fraunces-900: 900;
+}
+
+* {
+  font-size: var(--fontSize);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(25, 25, 25, 0.25);
+  display: flex;
+  justify-content: center;
+  font-family: var(--ff-Barlow);
+}
+
+.wrapper {
+  background-color: var(--color-white);
+  max-width: 1440px;
+  flex: 1;
+}
+
+header {
+  height: 80vh;
+  background-image: url(./images/desktop/image-header.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 22%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  font-family: var(--ff-Barlow);
+  font-weight: var(--fontWeight-Barlow-600);
+}
+
+ol {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+ol li + li {
+  margin-left: 2rem;
+}
+
+ol li {
+    cursor: pointer;
+}
+
+.menu {
+  color: var(--color-white);
+}
+
+.contact {
+  color: var(--color-very-dark-desaturated-blue);
+  background-color: var(--color-white);
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-family: var(--ff-Fraunces);
+  font-weight: var(--fontWeight-Fraunces-700);
+}
+
+h1 {
+  font-family: var(--ff-Fraunces);
+  font-weight: var(--fontWeight-Fraunces-900);
+  font-size: var(--fontSize-x40-large);
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
