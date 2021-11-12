@@ -50,7 +50,7 @@
 
   --color-white: hsl(0, 0%, 100%);
   --white-hue: 0;
-  --white-sat: 0;
+  --white-sat: 0%;
   --white-light: 100%;
 
   font-size: 18px;
@@ -151,6 +151,10 @@ ol li {
   color: var(--color-white);
 }
 
+.mobile-menu {
+  display: none;
+}
+
 .contact {
   color: var(--color-very-dark-desaturated-blue);
   background-color: var(--color-white);
@@ -159,6 +163,16 @@ ol li {
   text-transform: uppercase;
   font-family: var(--ff-Fraunces);
   font-weight: var(--fontWeight-Fraunces-700);
+}
+
+.contact:hover {
+  color: var(--color-white);
+  background-color: hsl(
+    var(--white-hue),
+    var(--white-sat),
+    var(--white-light),
+    0.25
+  );
 }
 
 h1 {
@@ -253,9 +267,9 @@ h1 {
 
 .text-container button:hover {
   background: linear-gradient(
-    to top,
+    to bottom,
     var(--color-white) 0%,
-    var(--color-yellow) 500%
+    var(--color-soft-red) 100%
   );
   cursor: pointer;
 }
@@ -394,7 +408,7 @@ h1 {
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: "milkbottles orange cone sugaracubes";
+  grid-template-areas: "milkbottles orange cone sugarcubes";
 }
 
 .milkbottles {
@@ -410,7 +424,7 @@ h1 {
 }
 
 .sugaracubes {
-  grid-area: sugaracubes;
+  grid-area: sugarcubes;
 }
 
 .bottom-img img {
@@ -456,12 +470,24 @@ footer {
   );
 }
 
+.footer-menu li {
+  transition: all 250ms ease-in-out;
+}
+.footer-menu li:hover {
+  color: var(--color-white);
+}
+
 .social-media {
   margin-bottom: 1rem;
 }
 
 .social-media i {
   font-size: var(--fontSize-x2-large);
+  transition: all 250ms ease-in-out;
+}
+
+.social-media i:hover {
+  color: var(--color-white);
 }
 
 .attribution {
@@ -473,4 +499,92 @@ footer {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////// */
+/* Media Queries ///////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 1000px) {
+  h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .client {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (max-width: 715px) {
+  .menu {
+    display: none;
+    background-color: var(--color-white);
+    flex-direction: column;
+    color: var(--color-grayish-blue);
+    position: absolute;
+    padding-top: 15%;
+    top: 15%;
+    left: 10%;
+    right: 10%;
+    clip-path: polygon(0% 10%, 0% 100%, 100% 100%, 100% 0%, 90% 10%);
+  }
+
+  .menu li {
+    margin: 1rem 0;
+  }
+  .menu li + li {
+    margin-left: 0;
+  }
+
+  .contact {
+    background-color: var(--color-yellow);
+  }
+
+  header {
+    min-height: 800px;
+    padding-bottom: 30%;
+    background-image: url(./images/mobile/image-header.jpg);
+  }
+
+  .mobile-menu {
+    display: flex;
+    font-size: var(--fontSize-x20-large);
+    color: white;
+  }
+
+  .info-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "transform-image"
+      "transform"
+      "stand-out-image"
+      "stand-out"
+      "graphic-design"
+      "photography";
+  }
+
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .testimonial-img {
+    margin-top: 2rem;
+  }
+
+  .img-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "milkbottles orange"
+      "cone sugarcubes";
+  }
+}
+
+@media (max-width: 550px) {
+  h1 {
+    font-size: var(--fontSize-x20-large);
+  }
 }
