@@ -6,3 +6,10 @@ MobileMenu.addEventListener("click", function () {
   MobileMenu.classList.toggle("fa-bars");
   Menu.style.display = Menu.style.display == "flex" ? "none" : "flex";
 });
+
+
+
+
+
+
+
