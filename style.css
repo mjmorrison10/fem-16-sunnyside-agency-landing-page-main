@@ -155,7 +155,7 @@ ol li {
   color: var(--color-very-dark-desaturated-blue);
   background-color: var(--color-white);
   border-radius: 50px;
-  padding: 1rem 2rem;
+  padding: 0.5rem 1.5rem;
   text-transform: uppercase;
   font-family: var(--ff-Fraunces);
   font-weight: var(--fontWeight-Fraunces-700);
@@ -269,15 +269,14 @@ h1 {
   text-align: center;
 }
 
-
 .graphic-design h2,
 .graphic-design p {
-    color: var(--color-dark-desaturated-cyan-graphic-design-text);
+  color: var(--color-dark-desaturated-cyan-graphic-design-text);
 }
 
 .photography h2,
 .photography p {
-    color: var(--color-dark-blue-photography-text);
+  color: var(--color-dark-blue-photography-text);
 }
 
 .graphic-design h2,
@@ -291,7 +290,7 @@ h1 {
 
 .graphic-design p,
 .photography p {
-    font-weight: var(--fontWeight-Barlow-600);
+  font-weight: var(--fontWeight-Barlow-600);
   max-width: 38ch;
   line-height: 1.5;
 }
@@ -321,13 +320,153 @@ h1 {
 /* Testimonials /////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////// */
 
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 6rem;
+}
 
+.client h2 {
+  font-family: var(--ff-Fraunces);
+  font-weight: var(--fontWeight-Fraunces-700);
+  color: var(--color-grayish-blue);
+  font-size: var(--fontSize-x2-large);
+  margin-bottom: 4rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.testimonials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.testimonial-img {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 75px;
+  width: 75px;
+}
+
+.testimonial-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.testimonial p {
+  color: var(--color-very-dark-grayish-blue);
+  font-weight: var(--fontWeight-Barlow-600);
+  margin: 2.5rem 0;
+  max-width: 34ch;
+  line-height: 1.5;
+}
+
+.testimonial h3 {
+  font-family: var(--ff-Fraunces);
+  font-weight: var(--fontWeight-Fraunces-900);
+  margin-bottom: 0.5rem;
+}
+
+.testimonial h4 {
+  color: var(--color-grayish-blue);
+  font-weight: var(--fontWeight-Barlow-600);
+}
+
+/* /////////////////////////////////////////////////////////////// */
+/* Bottom Images /////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////// */
+
+.img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "milkbottles orange cone sugaracubes";
+}
+
+.milkbottles {
+  grid-area: milkbottles;
+}
+
+.orange {
+  grid-area: orange;
+}
+
+.cone {
+  grid-area: cone;
+}
+
+.sugaracubes {
+  grid-area: sugaracubes;
+}
+
+.bottom-img img {
+  height: 100%;
+  width: 100%;
+}
 
 /* /////////////////////////////////////////////////////////////// */
 /* Footer /////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////////////////////////// */
 
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-very-dark-grayish-blue);
+  padding: 2rem;
+  color: var(--color-dark-desaturated-cyan-graphic-design-text);
+  --dark-moderate-cyan-footer-light: 50%;
+  background-color: hsl(
+    var(--dark-moderate-cyan-footer-hue),
+    var(--dark-moderate-cyan-footer-sat),
+    var(--dark-moderate-cyan-footer-light),
+    0.75
+  );
+}
+
+.footer-logo img {
+  filter: invert(27%) sepia(28%) saturate(721%) hue-rotate(116deg)
+    brightness(50%) contrast(91%);
+}
+
+.footer-menu {
+  margin: 2rem 0 4rem 0;
+  font-weight: var(--fontWeight-Barlow-600);
+  color: hsl(
+    var(--dark-desaturated-cyan-graphic-design-text-hue),
+    var(--dark-desaturated-cyan-graphic-design-text-sat),
+    var(--dark-desaturated-cyan-graphic-design-text-light),
+    0.75
+  );
+}
+
+.social-media {
+  margin-bottom: 1rem;
+}
+
+.social-media i {
+  font-size: var(--fontSize-x2-large);
+}
+
 .attribution {
+  position: absolute;
+  bottom: 0;
   font-size: 11px;
   text-align: center;
 }
